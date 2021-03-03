@@ -1,5 +1,4 @@
 import sys
-import pyfiglet
 from pathlib import Path
 import importlib
 import cmd
