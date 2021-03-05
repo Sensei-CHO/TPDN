@@ -20,10 +20,9 @@ def scanport(arg):
     ip, ports = arg.split(" ", 1)
     try:
         nm = nmap.PortScanner()
+        nm.scan(ip, ports)
     except nmap.nmap.PortScannerError:
         print(tpdnlib.Color("red")("You need to install nmap first!"))
-
-    nm.scan(ip, ports)
 
     for host in nm.all_hosts():
         print(tpdnlib.Color("yellow")("----------------------------------------------------"))
