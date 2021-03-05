@@ -13,6 +13,9 @@ try:
 except ModuleNotFoundError:
     libinstaller.install_packages("python-nmap")
 
+finaly:
+    import nmap
+    
 def scanport(arg):
     ip, ports = arg.split(" ", 1)
     nm = nmap.PortScanner()
