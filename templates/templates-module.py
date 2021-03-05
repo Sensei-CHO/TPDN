@@ -5,21 +5,18 @@ import cmd
 
 
 from src import tpdnlib
-from src import setupvenv
+from src import libinstaller
 
 try:
-    import <modules>
-
+    import modulename
+    
 except ModuleNotFoundError:
-    setupvenv.install_packages("<modules>")
-
-finally:
-    import <modules>
+    libinstaller.install_packages("modulename")
 
 
 class PromptShell(cmd.Cmd):
     intro = tpdnlib.Color("cyan")("Type help or ? to list commands.\n")
-    prompt = tpdnlib.Color("yellow")("<modulename>>")
+    prompt = tpdnlib.Color("yellow")("modulename>")
 
     def __init__(self):
         super(PromptShell, self).__init__()
@@ -47,5 +44,4 @@ def start():
 
     except KeyboardInterrupt:
         print(tpdnlib.Color("cyan")("Exiting module..."))
-        clear()
-        
+        tpdnlib.clear()
