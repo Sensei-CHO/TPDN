@@ -13,7 +13,7 @@ try:
 except ModuleNotFoundError:
     libinstaller.install_packages("python-nmap")
 
-finaly:
+finally:
     import nmap
     
 def scanport(arg):
