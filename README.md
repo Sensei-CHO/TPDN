@@ -10,6 +10,7 @@ You just have to drag and drop your installed modules to the module folder and y
 
 ## Requirement
 For the moment you only need python3 installed to run TPDN!
-''''
+
+'''python3
 python3 app.py
-''''
+'''
