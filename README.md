@@ -1,5 +1,5 @@
 # TPDN
-Small Cyber-Sec oriented framework using modules!
+Small Cyber-Sec oriented framework using modules written in python3 !
 
 This project is called TPDN because this project has "Toujours Pas De Nom"
 
