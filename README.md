@@ -9,7 +9,7 @@ You can use the "template-module.py" in the templates folder to dev your own one
 You just have to drag and drop your installed modules to the module folder and you are ready to go!
 
 ## Requirement
-For the moment all required python packages for TPDN are in the `requirement.txt`
+For the moment all required python packages for TPDN are in the `requirement.txt`.
 
 To install all required packages:
 ```python
