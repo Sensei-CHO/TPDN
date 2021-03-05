@@ -1,15 +1,5 @@
 import sys
-
-from src import setupvenv
-
-try:
-    import pyfiglet
-
-except ModuleNotFoundError:
-    setupvenv.install_packages("pyfiglet")
-
-finally:
-    import pyfiglet
+import pyfiglet
 
 def clear():
     sys.stdout.write("\x1b[2J\x1b[H")
