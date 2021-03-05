@@ -23,7 +23,6 @@ def scanport(arg):
         nm.scan(ip, ports)
     except nmap.nmap.PortScannerError:
         print(tpdnlib.Color("red")("You need to install nmap first!"))
-    except UnboundLocalError:
         pass
     
     for host in nm.all_hosts():
