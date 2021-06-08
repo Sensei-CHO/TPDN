@@ -9,7 +9,7 @@ from src import libinstaller
 
 try:
     import modulename
-    
+
 except ModuleNotFoundError:
     libinstaller.install_packages("modulename")
 
@@ -25,7 +25,7 @@ class PromptShell(cmd.Cmd):
         "Exit the module and return to TPDN: back"
 
         return True
-    
+
     def do_clear(self, arg):
         "Clear the terminal: clear"
 
@@ -34,6 +34,7 @@ class PromptShell(cmd.Cmd):
 
     def do_commandname(self, arg):
         "some description: command"
+
 
 def start():
 

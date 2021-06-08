@@ -1,11 +1,14 @@
 import sys
 import pyfiglet
 
+
 def clear():
     sys.stdout.write("\x1b[2J\x1b[H")
 
+
 def figlet(arg, color):
-    print(Color(color)(pyfiglet.figlet_format(arg, font = "slant")))
+    print(Color(color)(pyfiglet.figlet_format(arg, font="slant")))
+
 
 class Color:
     COLORS = {
@@ -23,7 +26,9 @@ class Color:
         except AttributeError:
             raise ValueError("color must be a str")
         except KeyError:
-            raise ValueError(f"unknow color, availables colors are {', '.join(self.COLORS)}")
+            raise ValueError(
+                f"unknow color, availables colors are {', '.join(self.COLORS)}"
+            )
 
     def __call__(self, text):
         return f"{self.prefix}{text} \033[0m"

@@ -22,21 +22,12 @@ class Loader:
             self.modules[module.stem] = importlib.import_module(module_name)
 
     def list_loaded(self):
-        
-        #list every sources
-        #/!\no need to install sources/!\
-        '''
-        print("")
-        print(self.sources["tpdnlib"].Color("yellow")("Installed sources are:"))
-        for source in self.sources_path.glob("*.py"):
-            print(self.sources["tpdnlib"].Color("cyan")(f" {source}"))
-        '''
-
         print("")
         print(self.sources["tpdnlib"].Color("yellow")("Installed modules are:"))
         for module in self.modules_path.glob("*.py"):
             print(self.sources["tpdnlib"].Color("cyan")(f" {module}"))
         print("")
+
 
 loader = Loader()
 module = loader.modules
@@ -77,7 +68,12 @@ class PromptShell(cmd.Cmd):
         try:
             module[arg].start()
         except KeyError:
-            print(source["tpdn"].Color("red")("This modules don't exist or is not installed!"))
+            print(
+                source["tpdn"].Color("red")(
+                    "This modules don't exist or is not installed!"
+                )
+            )
+
 
 if __name__ == "__main__":
     source["tpdnlib"].clear()
